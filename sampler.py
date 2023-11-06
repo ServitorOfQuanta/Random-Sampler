@@ -1,4 +1,4 @@
-from secrets import randbelow
+from random import randint
 from typing import Sequence
 import argparse
 
@@ -12,6 +12,7 @@ def sample(pool_m: Sequence, n: int):
 
     Raises:
         AssertionError: This function will throw an assertion error if n is found to be negative or higher than the length of pool_m
+        TypeError: This function will raise a type error if pool_m or n are not their hinted types.
 
     Returns:
         list: _description_
@@ -40,7 +41,7 @@ def sample(pool_m: Sequence, n: int):
     places = list(range(length))
     for _ in range(n):
         max_place = len(places)
-        place = randbelow(max_place)
+        place = randint(0, max_place-1)
         sample_place = places[place]
         samples.append(pool_m[sample_place])
         places.pop(place)
