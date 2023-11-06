@@ -16,6 +16,15 @@ def sample(pool_m: Sequence, n: int):
     Returns:
         list: _description_
     """
+    if not isinstance(pool_m, Sequence):
+        raise TypeError(
+            "pool_m must be a list, tuple, or range"
+        )
+    if not isinstance(n, int):
+        raise TypeError(
+            "n must be an integer"
+        )
+
     length = len(pool_m)
     samples = []
 
