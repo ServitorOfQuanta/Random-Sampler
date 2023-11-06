@@ -16,7 +16,7 @@ This contains the main function, sample(pool_m, n). This is a function that crea
 
 I made a few assumptions about the context of what I was building, namely:
 
-- My input pool could come in as any sequence, meaning that I could be working with a range or a tuple along with a list. This means that my solution could not edit the    pool directly.
+- My input pool could come in as any sequence, meaning that I could be working with a range or a tuple along with a list. This means that my solution could not edit the pool directly.
 - The goal was speed. This is likely to take up a lot of runtime in whatever program it was running for and limiting the amount it took up would be extremely beneficial to the upstream program.
 - It was not the point of this exercise to implement a random number generator, just a random sampler. Hence it was okay to limit the scope of this solution to just the sampling behaviour.
 - Some degree of determinism was acceptable. Perfect randomness is impossible, but we don't need to be cryptographically secure either given the use case.
